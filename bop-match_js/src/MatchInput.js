@@ -152,7 +152,6 @@ export default function MatchInput(props) {
                     })
                 })
 
-                console.log(matchTracks.length)
                 if(matchTracks.length == 0){
                     errorDialogTextChange("Sorry, no matching tracks found. Try a different user!")
                     handleErrorOpen()
@@ -170,11 +169,7 @@ export default function MatchInput(props) {
     }
 
     useEffect(() => {
-        console.log(user1Tracks)
-    }, [user1Tracks])
-
-    useEffect(() => {
-        console.log(user2Tracks)
+        //console.log(user2Tracks)
         matchTracks()
     }, [user2Tracks])
 
@@ -200,11 +195,11 @@ export default function MatchInput(props) {
                 'Content-Type': 'application/json'
             },
             success: data => {
-                console.log(data)
+                //console.log(data)
                 matchPlaylistId = data.id
             },
             error: data => {
-                console.log(data)
+                //console.log(data)
             },
             async: false
         });
@@ -227,10 +222,10 @@ export default function MatchInput(props) {
                     'Content-Type': 'application/json'
                 },
                 success: data => {
-                    console.log(data)
+                    //console.log(data)
                 },
                 error: data => {
-                    console.log(data)
+                    //console.log(data)
                 },
                 async: false
             });
