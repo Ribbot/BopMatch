@@ -69,8 +69,8 @@ export default function MatchInput(props) {
                 xhr.setRequestHeader("Authorization", "Bearer " + props.token);
             },
             success: data => {
-                hostUserIdChange(data.display_name)
-                user1IdChange(data.display_name)
+                hostUserIdChange(data.id)
+                user1IdChange(data.id)
             }
         });
     }, []);
